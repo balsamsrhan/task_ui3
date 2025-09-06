@@ -1,3 +1,32 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:task_ui3/helpers/routes.dart';
+import 'package:task_ui3/screens/houses_screen.dart';
+
+import 'screens/login.dart';
+import 'screens/profile_dash.dart';
+import 'screens/service_screen.dart';
+import 'screens/sign_up.dart';
+import 'screens/splash.dart';
+
+
+void main() {
+  runApp(
+    MaterialApp(
+      theme: ThemeData(textTheme: GoogleFonts.poppinsTextTheme()),
+      debugShowCheckedModeBanner: false,
+      routes: {
+        AppRoutes.splash: (context) => SplashScreen(),
+        AppRoutes.login: (context) => LoginScreen(),
+        AppRoutes.dash: (context) => ProfileDashBoard(),
+        AppRoutes.services: (context) => ServicesScreen(),
+        AppRoutes.houses:(context) => HousesScreen(),
+        AppRoutes.signup: (context) => SignUp(),
+      },
+    ),
+  );
+}
+/*
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -553,3 +582,4 @@ class HouseWidget extends StatelessWidget {
     );
   }
 }
+*/
